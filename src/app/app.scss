@@ -1,0 +1,81 @@
+//import font 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,900;1,300;1,900&display=swap');
+//global
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+//color
+.purple{
+    color: $purple
+}
+.yellow{
+    color: $yellow
+}
+.darke{
+    color:$darke
+}
+.curl{
+    color: $curl
+}
+.beba{
+    color:$beba
+}
+//Aling
+.center{
+    text-align: center;
+}
+//Margin
+.no.margin{
+    margin: 0px;
+}
+.mg-top-5{
+    margin-top: 5px;
+}
+.mg-top-10{
+    margin-top: 10px;
+}
+.mg-top-20{
+    margin-top: 20px;
+}
+.mg-top-30{
+    margin-top: 30px;
+}
+.mg-top-40{
+    margin-top: 40px;
+}
+//padding
+.no-padding{
+    padding: 0px
+}
+.padding-40{
+    padding: 40px
+}
+.padding-30{
+    padding: 30px
+}
+.padding-20{
+    padding: 20px;
+}
+.padding-10{
+    padding: 10px;
+}
+.padding-top-5-percent{
+    padding-top: 5%;
+}
+.padding-top-10-percent{
+    padding-top: 10%;
+}
+.padding-top-20-percent{
+    padding-top: 20%;
+}
+.padding-top-30{
+    padding-top: 30px;
+}
+//FONTS
+.bold {
+    font-weight: 700;
+}
+.light {
+    font-weight: 300;
+}

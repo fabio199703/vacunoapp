@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar> 
+    <ion-buttons  end>
+      <button ion-button icon-only class="bg-transparent">
+        <img class="brown-icon" src="assets/icon/avatar.png">
+      </button>
+  </ion-buttons>
+  <ion-buttons end>
+    <button ion-button icon-only class="bg-transparent">
+      <img class="brownicon" src="assets/icon/cart.png">
+    </button>
+  </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <!-- LIST -->
+  <div class="list-bebidas">
+    <h5 class="featured-title">Para matar a sede</h5>
+
+    <ion-list>
+      <ion-item *ngFor="let d of driks">
+        <ion-avatar item-start>
+          <img class="border-img" [src]="d.image">
+        </ion-avatar>
+        <p class="item-title">{{d.name}}</p>
+        <p class="item-description">{{d.description}}</p>
+        <p class="item-price">{{d.price | currency:'PY'}}</p>
+      </ion-item>
+    </ion-list>
+  </div>
+
+</ion-content>

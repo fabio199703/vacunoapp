@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Perfil</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+
+  <ion-item *ngFor="let b of users">
+        <img src="../../assets/imgs/perfil.png" alt="Profile picture" class="profile-picture"> 
+        <br>
+         <p class="item-titlee">Nombre:</p>
+         <p class="item-title">{{b.name}}</p>
+         <p class="item-description"> Correo :<br> {{b.email}}</p>
+
+         <button ion-button block (click)="cerrarSesion()" [navPush]="loginpage" >Cerrar Sesión</button>
+
+       </ion-item>
+ 
+   
+
+</ion-content>

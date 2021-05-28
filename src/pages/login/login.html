@@ -1,0 +1,98 @@
+<ion-content>
+  <!--LOGIN-->
+  <div class="bg-login" *ngIf="login" [@login]>
+    <!--OVERLAY-->
+    <div class="overlay" >
+      <!--LOGIN CONTAINER-->
+    <div>
+      <!--LOGO-->
+     <div class="center padding-top-5-percent">
+       <img src = "./assets/imgs/vlogo.png" class="logo-white-login">
+     </div>
+
+      <!--TEXTOS-->
+     <div class="mg-top-20" >
+       <!--TITULO-->
+       <h5 class="curl center bold ">
+        BOV
+       </h5>
+       <!--SUBTITULO-->
+       <p class="curl center light no-margin mg-top-5">
+         Sistema de gestion ganadera
+       </p>
+    </div>
+    <!--FORMS CTA-->
+    <div class="padding-40">
+      <ion-item class="bg-transparent no-padding mg-top-20">
+        <ion-label stacked class="curl bold">Usuario</ion-label>
+        <ion-input type="email" class="curl"
+        [(ngModel)]="loginForm.email"></ion-input>
+      </ion-item>
+
+      <ion-item class="bg-transparent no-padding padding-10">
+        <ion-label stacked class="curl bold">Contraseña</ion-label>
+        <ion-input type="password" class="curl"  [(ngModel)]="loginForm.password"></ion-input>
+      
+      </ion-item>
+      <div class="ctalogin center bold mg-top-20" (click)="haLogin()">
+        Entrar
+      </div>
+      <!--RESGISTRAR NUEVA-->
+      <div class="txtRegistrar light mg-top-20 center" (click)= "exibirRegistrar()">
+        Adminstracion
+      </div>
+    </div>   
+    </div>
+    </div>  
+  </div>
+  <!--REGISTRO-->
+  <div class="bg-register" *ngIf="register" [@registro]>
+    <!--OVERLAY-->
+    <div class="overlay" >
+      <!--REGISTER CONTAINER-->
+    <div>
+      <!--LOGO-->
+     <div class="center padding-top-5-percent">
+       <img src = "./assets/imgs/vlogo.png" class="logo-white-login">
+     </div>
+
+      <!--TEXTOS-->
+     <div class="mg-top-10" >
+       <!--TITULO-->
+       <h5 class="curl center bold ">
+         Muy bien! Comenzamos.
+       </h5>
+       <!--SUBTITULO-->
+       <p class="curl center light no-margin mg-top-5">
+         Crea tus datos para tener acceso en la app
+       </p>
+    </div>
+    <!--FORMS CTA-->
+    <div class="padding-20">
+      <ion-item class="bg-transparent no-padding mg-top-10">
+        <ion-label stacked class="curl bold">Como es tu nombre</ion-label>
+        <ion-input type="text" class="curl"[(ngModel)]="registerForm.name"></ion-input>
+      </ion-item>
+
+      <ion-item class="bg-transparent no-padding mg-top-10">
+        <ion-label stacked class="curl bold">Cual es tu correo</ion-label>
+        <ion-input type="email" class="curl"[(ngModel)]="registerForm.email"></ion-input>
+      </ion-item>
+
+      <ion-item class="bg-transparent no-padding mg-top-10">
+        <ion-label stacked class="curl bold">Eliga tu super contraseña      </ion-label>
+        <ion-input type="password" class="curl"[(ngModel)]="registerForm.password"></ion-input>
+        
+      </ion-item>
+      <div class="ctaregister center bold mg-top-20" (click)="haregister()">
+        Registrar
+      </div>
+      <!--RESGISTRAR NUEVO-->
+      <div class="txtRegistrar light mg-top-20 center" (click)="exibirlogin()">
+        Ya tengo una cuenta
+      </div>
+    </div>   
+    </div>
+    </div>  
+  </div>
+</ion-content>

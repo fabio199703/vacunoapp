@@ -1,0 +1,101 @@
+<ion-header>
+
+  <ion-navbar> 
+    <ion-buttons  end>
+      <button ion-button icon-only class="bg-transparent">
+        <img class="brown-icon" src="assets/icon/avatar.png">
+      </button>
+  </ion-buttons>
+  <ion-buttons end>
+    <button ion-button icon-only class="bg-transparent">
+      <img class="brownicon" src="assets/icon/cart.png">
+    </button>
+  </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <!-- LIST -->
+  <div>
+    <h5 class="featured-title">Pizzas</h5>
+
+    <ion-list>
+      <ion-item *ngFor="let b of pizzas">
+        <ion-avatar item-start>
+          <img class="border-img" [src]="b.image">
+        </ion-avatar>
+        <p class="item-title">{{b.name}}</p>
+        <p class="item-description">{{b.description}}</p>
+        <p class="item-price">{{b.price | currency:'PY'}}</p>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <!-- LIST -->
+  <div class="list-bebidas">
+    <h5 class="featured-title">Para matar a sede</h5>
+
+    <ion-list>
+      <ion-item *ngFor="let d of driks">
+        <ion-avatar item-start>
+          <img class="border-img" [src]="d.image">
+        </ion-avatar>
+        <p class="item-title">{{d.name}}</p>
+        <p class="item-description">{{d.description}}</p>
+        <p class="item-price">{{d.price | currency:'PY'}}</p>
+      </ion-item>
+    </ion-list>
+  </div>
+
+
+   <!-- LIST -->
+   <div class="list-bebidas">
+    <h5 class="featured-title">Papas Fritas</h5>
+
+    <ion-list>
+      <ion-item *ngFor="let f of fritas">
+        <ion-avatar item-start>
+          <img class="border-img" [src]="f.image">
+        </ion-avatar>
+        <p class="item-title">{{f.name}}</p>
+        <p class="item-description">{{f.description}}</p>
+        <p class="item-price">{{f.price | currency:'PY'}}</p>
+      </ion-item>
+    </ion-list>
+  </div>
+
+   <!-- LIST -->
+   <div class="list-bebidas">
+    <h5 class="featured-title">Hamburguesas</h5>
+
+    <ion-list>
+      <ion-item *ngFor="let h of hambur">
+        <ion-avatar item-start>
+          <img class="border-img" [src]="h.image">
+        </ion-avatar>
+        <p class="item-title">{{h.name}}</p>
+        <p class="item-description">{{h.description}}</p>
+        <p class="item-price">{{h.price | currency:'PY'}}</p>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div class="list-bebidas">
+    <h5 class="featured-title">Ensaladas</h5>
+
+    <ion-list>
+      <ion-item *ngFor="let s of saladas">
+        <ion-avatar item-start>
+          <img class="border-img" [src]="s.image">
+        </ion-avatar>
+        <p class="item-title">{{s.name}}</p>
+        <p class="item-description">{{s.description}}</p>
+        <p class="item-price">{{s.price | currency:'PY'}}</p>
+      </ion-item>
+    </ion-list>
+    
+  </div>
+
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar> 
+    <ion-buttons  end>
+      <button ion-button icon-only class="bg-transparent">
+        <img class="brown-icon" src="assets/icon/avatar.png">
+      </button>
+  </ion-buttons>
+  <ion-buttons end>
+    <button ion-button icon-only class="bg-transparent">
+      <img class="brownicon" src="assets/icon/cart.png">
+    </button>
+  </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <!-- LIST -->
+  <div class="list-bebidas">
+    <h5 class="featured-title">Las mejores Papas fritas</h5>
+
+    <ion-list>
+      <ion-item *ngFor="let f of fritas">
+        <ion-avatar item-start>
+          <img class="border-img" [src]="f.image">
+        </ion-avatar>
+        <p class="item-title">{{f.name}}</p>
+        <p class="item-description">{{f.description}}</p>
+        <p class="item-price">{{f.price | currency:'PY'}}</p>
+      </ion-item>
+    </ion-list>
+  </div>
+
+</ion-content>
